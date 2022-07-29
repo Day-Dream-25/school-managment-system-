@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>school</title>
+</head>
+<body>
+    <form action="" method="POST" id="frm" >
+        {% csrf_token %}
+        {{ form.as_p }}
+    <button type="submit" value="POST/">submit</button>
+    </form>
+</body>
+</html>

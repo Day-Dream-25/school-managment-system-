@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h2>you login as:{{ user.username }}</h2>
+
+    {% for teacher in teachers  %}
+     <h3> teacher name :{{ teacher }}</h3>
+    {% endfor %}
+
+    <h3>school name :{{ object.school.name }}</h3>
+
+    <h3> birthdate :{{ object.birthdate }}</h3>
+
+    <h3> standard :{{ object.standard }}</h3>
+
+     <button type="button">
+            <a href="{% url 'updatestudent' object.id %}">update</a></button>
+
+    <button><a href="{% url 'updateuser' request.user.id %}">User profile</a></button>
+
+    <button><a href="{% url 'logout' %}">logout</a></button>
+
+</body>
+</html>

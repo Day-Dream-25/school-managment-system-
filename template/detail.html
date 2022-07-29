@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="POST">
+    <h1>you login as:{{ user.username }}</h1>
+    <p>birthdate :{{ object.birthdate }}</p>
+    <p>subject :{{ object.subject }}</p>
+
+      <button type="button"  id="submit">
+        <a href="{% url 'updateteacher' object.id %}">profile</a></button>
+
+    <button><a href="{% url 'updateuser' request.user.id %}">User profile</a></button>
+
+    <br/>
+        <button><a href="{% url 'logout'  %}">logout</a></button>
+</form>
+</body>
+</html>
